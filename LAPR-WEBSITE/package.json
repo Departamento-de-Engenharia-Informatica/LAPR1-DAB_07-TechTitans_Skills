@@ -1,0 +1,15 @@
+{
+  "name": "lapr-web",
+  "version": "1.0.0",
+  "description": "LAPR1-PROJECT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tech Titans",
+  "license": "ISC",
+  "devDependencies": {
+    "daisyui": "^4.12.13",
+    "tailwindcss": "^3.4.13"
+  }
+}
