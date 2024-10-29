@@ -1,8 +1,9 @@
 module.exports = {
     darkMode: 'class', // or 'media' if you prefer
     content: [
-        './src/**/*.{html,js}', // Adjust the paths according to your project structure
+        './src/**/*.{html,js,jsx,ts,tsx}', // Adjust the paths according to your project structure
         './index.html',
+        './**/*.html', // Include all HTML files in the project
     ],
     theme: {
         extend: {
