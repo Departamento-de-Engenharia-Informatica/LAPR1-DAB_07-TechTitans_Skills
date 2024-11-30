@@ -14,14 +14,13 @@
 </head>
 <body class="bg-background-dark">
 
-
 <nav class="bg-white border-gray-200 dark:bg-gray-900 sticky top-0 z-50">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <img src="./images/SAS.jpg" class="h-8 rounded-lg" alt="Flowbite Logo" />
+        <img src="./images/SAS.jpg" class="h-8 rounded-lg" alt="Logo" />
         <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">SAS 720</span>
     </a>
-    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+    <button id="navbar-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
@@ -43,11 +42,22 @@
   </div>
 </nav>
 
+<script>
+  document.getElementById('navbar-toggle').addEventListener('click', function() {
+    var navbar = document.getElementById('navbar-default');
+    if (navbar.classList.contains('hidden')) {
+      navbar.classList.remove('hidden');
+    } else {
+      navbar.classList.add('hidden');
+    }
+  });
+</script>
+
   <section id="section-home">
     <div class="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:h-screen lg:grid-cols-2">
         <div class="relative z-10 lg:py-16">
-          <div class="relative h-64 sm:h-80 lg:h-full">
+          <div class="relative h-auto sm:h-80 lg:h-full">
             <img
               alt=""
               src="./images/SAS.jpg"
@@ -67,7 +77,28 @@
             </h2>
   
             <p class="mt-5 text-gray-600">
-              A aplicação SAS 360 é vital para os estudantes do Instituto Politécnico do Porto (IPP), oferecendo serviços como reserva de refeições e visualização de opções de residência. No entanto, a fragmentação de informações, como horários, faltas e propinas, dificulta a experiência do utilizador. <br> <br> Com as novas funcionalidades, centralizamos todas essas informações, permitindo uma gestão académica mais eficiente. Agora, os alunos podem consultar horários, gerir propinas e acompanhar notas e créditos em um único lugar. <br> <br> Atualizar a SAS 360 é essencial para simplificar a vida académica dos estudantes, ajudando-os a se concentrar no seu desenvolvimento e sucesso escolar.</p>
+              A aplicação SAS 360 é vital para os estudantes do Instituto Politécnico do Porto (IPP), oferecendo serviços como reserva de refeições e visualização de opções de residência. No entanto, a fragmentação de informações, como horários, faltas e propinas, dificulta a experiência do utilizador. <br> <br> Com as novas funcionalidades, centralizamos todas essas informações, permitindo uma gestão académica mais eficiente. Agora, os alunos podem consultar horários, gerir propinas e acompanhar notas e créditos em um único lugar. <br> <br> Aproveita esta atualização para descomplicar a tua vida académica. Faz download já!!!</p>
+              <div class="flex flex-row mt-8 gap-4 w-full justify-center">
+                <a href="https://play.google.com/store/apps/details?id=com.ipp.sas360" class="flex items-center justify-between text-emerald w-1/2 sm:w-auto text-center rounded-xl border border-background-dark p-4 shadow-xl transition hover:border-emerald/10 hover:shadow-emerald/10 bg-background-dark">
+                  <span class="text-sm sm:text-base">Download Android</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2" class="ml-2">
+                    <path d="M4 10l0 6"></path>
+                    <path d="M20 10l0 6"></path>
+                    <path d="M7 9h10v8a1 1 0 0 1 -1 1h-8a1 1 0 0 1 -1 -1v-8a5 5 0 0 1 10 0"></path>
+                    <path d="M8 3l1 2"></path>
+                    <path d="M16 3l-1 2"></path>
+                    <path d="M9 18l0 3"></path>
+                    <path d="M15 18l0 3"></path>
+                  </svg>
+                </a>
+                <a href="https://apps.apple.com/us/app/sas-360/id1600226206" class="flex items-center justify-between text-jasper w-1/2 sm:w-auto text-center rounded-xl border border-background-dark p-4 shadow-xl transition hover:border-jasper/10 hover:shadow-jasper/10 bg-background-dark">
+                  <span class="text-sm sm:text-base">Download IOS</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2" class="ml-2">
+                    <path d="M8.286 7.008c-3.216 0 -4.286 3.23 -4.286 5.92c0 3.229 2.143 8.072 4.286 8.072c1.165 -.05 1.799 -.538 3.214 -.538c1.406 0 1.607 .538 3.214 .538s4.286 -3.229 4.286 -5.381c-.03 -.011 -2.649 -.434 -2.679 -3.23c-.02 -2.335 2.589 -3.179 2.679 -3.228c-1.096 -1.606 -3.162 -2.113 -3.75 -2.153c-1.535 -.12 -3.032 1.077 -3.75 1.077c-.729 0 -2.036 -1.077 -3.214 -1.077z"></path>
+                    <path d="M12 4a2 2 0 0 0 2 -2a2 2 0 0 0 -2 2"></path>
+                  </svg>
+                </a>
+              </div>
           </div>
         </div>
       </div>
@@ -202,127 +233,100 @@
 
     </div>
   </section>
-    <section  id="section-mockup">
-    <div class="flex flex-col sm:flex-row pb-10">
+  <section  id="section-mockup" class="m-14">
+    <div class="flex flex-col sm:flex-row g pb-10 sm:p-10">
       <div class="basis-1/2 flex items-center justify-center">
         <div class="flex items-center">
           <div class="mockup-phone mx-10">
             <div class="camera"></div>
             <div class="display">
               <div class="artboard artboard-demo phone-1">
-                <video src="./video/Honda CB750 Hornet Exhaust Sound.mp4" controls></video>              </div>
+                <video src="./video/lapr1_final.mp4" controls class="w-full h-full object-cover"></video>
+              </div>
             </div>
           </div>
         
         </div>
       </div>
       <div class="basis-1/2 flex items-center justify-center">
-        <div class="p-8 sm:p-16 lg:p-24">
+        <div class="sm:p-16 lg:p-24 w-full sm:w-auto mt-8 sm:mt-0">
           <h2 class="text-2xl font-bold sm:text-3xl text-gray-500" id="carroussel-title">
             O SAS está com uma nova cara e novas funcionalidades
           </h2>
-          <p class="mt-4 text-white" id="carroussel-body">
+          <p class="mt-4 text-white text-justify" id="carroussel-body">
             Com a nova interface, é possível visualizar horários, consultar faltas, gerir propinas, realizar inscrições em unidades curriculares e acompanhar notas e créditos de forma centralizada. <br> Tudo isso foi pensado para melhorar a experiência do utilizador e ajudar na organização das atividades académicas. Mantendo o seu look original.
           </p>
         </div>
       </div>
     </div>
   </section>
-  <section id="section-team" class="m-10">
-    <div class="flex flex-row justify-center items-center">
-      <h1 class="text-4xl font-bold">A nossa equipa</h1>
-    </div>
-    <div class="flex flex-row justify-center items-center gap-4 m-10">
-      <div class="card bg-base-100 shadow-xl w-1/6">
-        <figure>
-          <img
-            src="./images/person.jpg"
-            alt="Shoes" />
-        </figure>
-        <div class="card-body">
-          <h2 class="card-title">
-            Rafael Vieira
-          </h2>
 
-          <div class="card-actions justify-start">
-            <div class="badge badge-outline">Developer</div>
-          </div>
-        </div>
-      </div>
-      <div class="card bg-base-100 shadow-xl w-1/6">
-        <figure>
-          <img
-            src="./images/FotoGabriel.jpg"
-            alt="Shoes" />
-        </figure>
-        <div class="card-body">
-          <h2 class="card-title">
-            Gabriel Teixeira
-
-          </h2>
-
-          <div class="card-actions justify-start">
-            <div class="badge badge-outline">Mockup</div>
-            <div class="badge badge-outline">Repo</div>
-          </div>
+<section id="section-team" class="m-14">
+  <div class="flex flex-row justify-center items-center">
+    <h1 class="text-4xl font-bold">A nossa equipa</h1>
+  </div>
+  <div class="flex flex-wrap justify-center items-center gap-4 m-10">
+    <div class="card bg-base-100 shadow-xl w-full sm:w-1/2 md:w-1/3 lg:w-1/6">
+      <figure class="w-full h-auto">
+        <img src="./images/unnamed.jpg" alt="Rafael Vieira" class="w-full h-full object-cover" />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">Rafael Vieira</h2>
+        <div class="card-actions justify-start">
+          <div class="badge badge-outline">Developer</div>
         </div>
       </div>
     </div>
-    <div class="flex flex-row justify-center items-center gap-4 mb-10">
-      <div class="card bg-base-100 shadow-xl w-1/6">
-        <figure>
-          <img
-            src="./images/FotoAlexandre2.jpg"
-            alt="Shoes" />
-        </figure>
-        <div class="card-body">
-          <h2 class="card-title">
-            Alexandre H.
-
-          </h2>
-
-          <div class="card-actions justify-start">
-            <div class="badge badge-outline">Design website</div>
-          </div>
-        </div>
-      </div>
-      <div class="card bg-base-100 shadow-xl w-1/6">
-        <figure>
-          <img
-            src="./images/RitaOliveira2.jpg"
-            alt="Shoes" />
-        </figure>
-        <div class="card-body">
-          <h2 class="card-title">
-            Rita Oliveira
-
-          </h2>
-
-          <div class="card-actions justify-start">
-            <div class="badge badge-outline">Design website</div>
-          </div>
-        </div>
-      </div>
-      <div class="card bg-base-100 shadow-xl w-1/6">
-        <figure>
-          <img
-            src="./images/Foto Andre.jpeg"
-            alt="Shoes" />
-        </figure>
-        <div class="card-body">
-          <h2 class="card-title">
-            André Bouayad
-
-          </h2>
-
-          <div class="card-actions justify-start">
-            <div class="badge badge-outline">Mockup</div>
-            <div class="badge badge-outline">Video</div>
-          </div>
+    <div class="card bg-base-100 shadow-xl w-full sm:w-1/2 md:w-1/3 lg:w-1/6">
+      <figure class="w-full h-auto">
+        <img src="./images/FotoGabriel.jpg" alt="Gabriel Teixeira" class="w-full h-full object-cover" />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">Gabriel Teixeira</h2>
+        <div class="card-actions justify-start">
+          <div class="badge badge-outline">Mockup</div>
+          <div class="badge badge-outline">Repo</div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+  <div class="flex flex-wrap justify-center items-center gap-4 m-10">
+    <div class="card bg-base-100 shadow-xl w-full sm:w-1/2 md:w-1/3 lg:w-1/6">
+      <figure class="w-full h-auto">
+        <img src="./images/FotoAlexandre2.jpg" alt="Alexandre H." class="w-full h-full object-cover" />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">Alexandre H.</h2>
+        <div class="card-actions justify-start">
+          <div class="badge badge-outline">Design website</div>
+        </div>
+      </div>
+    </div>
+    <div class="card bg-base-100 shadow-xl w-full sm:w-1/2 md:w-1/3 lg:w-1/6">
+      <figure class="w-full h-auto">
+        <img src="./images/RitaOliveira2.jpg" alt="Rita Oliveira" class="w-full h-full object-cover" />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">Rita Oliveira</h2>
+        <div class="card-actions justify-start">
+          <div class="badge badge-outline">Design website</div>
+        </div>
+      </div>
+    </div>
+    <div class="card bg-base-100 shadow-xl w-full sm:w-1/2 md:w-1/3 lg:w-1/6">
+      <figure class="w-full h-auto">
+        <img src="./images/Foto Andre.jpeg" alt="André Bouayad" class="w-full h-full object-cover" />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">André Bouayad</h2>
+        <div class="card-actions justify-start">
+          <div class="badge badge-outline">Mockup</div>
+          <div class="badge badge-outline">Video</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
   <footer class="footer bg-white text-background-dark p-10 border-t-2 border-jasper flex flex-wrap justify-center items-center gap-8">
       <aside>
           <img src="./images/logo_tech.png" alt="" class="w-24 h-24 shadow-md rounded-lg">
